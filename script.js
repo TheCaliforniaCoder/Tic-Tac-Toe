@@ -2,48 +2,56 @@
 
 let currentPlayer = 'red';
 
-//player choice arrays
-
-playerOneChoices = [];
-
-playerTwoChoices = [];
-
 //change the color of the boxes on click
 
 let colorBox = document.querySelectorAll('.box');
 
-colorBox.forEach((box, index) => {
+colorBox.forEach((box) => {
     box.addEventListener('click', takeTurns)
-    console.log(index)
 })
 
 //possible winning combinations
 const winningCombinations = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [1, 5, 9],
-    [3, 5, 7],
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+    [0, 3, 6],
     [1, 4, 7],
-    [2, 5, 8],
-    [3, 6, 9]
+    [2, 5, 8]
 ];
+
+//player choice arrays
+
+let playerOneChoices = [];
+
+let playerTwoChoices = [];
+
+let gameOverPlayerWon = false;
 
 //testing out a two player color
 function takeTurns(e){
+    const currentIndex = parseInt(e.target.id)
     // Change the box background color to match the currentPlayer
     if (currentPlayer === 'red') {
       e.target.style.backgroundColor = 'red';
+      playerOneChoices.push(currentIndex)
     } else {
       e.target.style.backgroundColor = 'blue';
+      playerTwoChoices.push(currentIndex)
     }
+    gameOverPlayerWon = determineWinner(currentPlayer);
+
+    console.log(gameOverPlayerWon)
+
+    console.log('p1', playerOneChoices)
+    console.log('p2', playerTwoChoices)
+    
 // conditional for combinations 
 // first push each player choice to the choices array
 // then compare choices array with winning combinations
-    let divsArray = []; 
-   for (let i = 0, j = colorBox.length; i < j; i++){
-    divsArray.push(colorBox[i].getAttribute('id'))
-   }
+
 
 
 // Let's set up whos turns is it next based on the current value of currentPlayer
@@ -53,7 +61,25 @@ function takeTurns(e){
         currentPlayer = 'red';
     }
 
-    // Alert user on who's turn is it next
+// Alert user on who's turn is it next
+
+}
+
+function determineWinner(currentPlayer){
+const playerChoice = currentPlayer === 'red'? playerOneChoices : playerTwoChoices;
+console.log(playerChoice, 'player choice')
+
+if (playerChoice.length >= 3){
+
+    const playerWon = winningCombinations.some(winningCombo => {
+        return winningCombo.every((winningIndex) =>{
+         return playerChoice.includes(winningIndex)
+        })
+     })
+    return playerWon? currentPlayer: false;
+} else {
+    return false;
+}
 
 }
 

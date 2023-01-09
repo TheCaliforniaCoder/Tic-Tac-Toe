@@ -2,11 +2,16 @@
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3, 80px);
-    grid-gap: 2px;
-    /* grid-template-areas: 'b1 b2 b3' 'b1 b2 b3' 'b1 b2 b3' */
+    grid-gap: 5px;
+    
 }
 
 .parent > div {
     padding: 10px;
-    background-color: purple;
+    background-color: grey;
+}
+
+.box {
+    border-radius: 10px;
+    w
 }
