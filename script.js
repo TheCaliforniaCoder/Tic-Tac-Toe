@@ -1,6 +1,8 @@
-//create variables for current player
+//create variables for current player and buttons
 
 let currentPlayer = 'red';
+let restartButton = document.querySelector('#restart');
+let startButton = document.querySelector('#play-button');
 
 //change the color of the boxes on click
 
@@ -34,6 +36,9 @@ let gameOverPlayerWon = false;
 
 //function that changes colors for each player and determines who's turn it is
 function takeTurns(e){
+    if (gameOverPlayerWon){
+        return;
+    }
     const currentIndex = parseInt(e.target.id)
     e.target.removeEventListener('click', takeTurns);
     // Change the box background color to match the currentPlayer
@@ -56,12 +61,14 @@ function takeTurns(e){
 //sets up who's turns is it next based on the current value of currentPlayer
     if (currentPlayer == 'red'){
         currentPlayer = 'blue';
+        console.log('blues turn')
     }else {
         currentPlayer = 'red';
+        console.log('reds turn')
     }
 
 // Alert user on who's turn is it next
-
+    
 }
 
 function determineWinner(currentPlayer){
@@ -76,12 +83,18 @@ if (playerChoice.length >= 3){
         })
      })
     return playerWon? currentPlayer: false;
-} else {
+} else{
     return false;
 }
 
-
 }
+
+/* function displayResult(){
+    if(playerOneChoices.length + playerTwoChoices.length == 9){
+                return console.log(`it's a tie`)
+            }
+    else if ()
+} */
 
 /* function blueFunction (){
     this.style.backgroundColor = 'blue'
