@@ -1,4 +1,4 @@
-//create variables for players
+//create variables for current player
 
 let currentPlayer = 'red';
 
@@ -28,11 +28,14 @@ let playerOneChoices = [];
 
 let playerTwoChoices = [];
 
+
+//variable that will change once player wins or ties
 let gameOverPlayerWon = false;
 
-//testing out a two player color
+//function that changes colors for each player and determines who's turn it is
 function takeTurns(e){
     const currentIndex = parseInt(e.target.id)
+    e.target.removeEventListener('click', takeTurns);
     // Change the box background color to match the currentPlayer
     if (currentPlayer === 'red') {
       e.target.style.backgroundColor = 'red';
@@ -41,20 +44,16 @@ function takeTurns(e){
       e.target.style.backgroundColor = 'blue';
       playerTwoChoices.push(currentIndex)
     }
+
     gameOverPlayerWon = determineWinner(currentPlayer);
+
 
     console.log(gameOverPlayerWon)
 
     console.log('p1', playerOneChoices)
     console.log('p2', playerTwoChoices)
-    
-// conditional for combinations 
-// first push each player choice to the choices array
-// then compare choices array with winning combinations
 
-
-
-// Let's set up whos turns is it next based on the current value of currentPlayer
+//sets up who's turns is it next based on the current value of currentPlayer
     if (currentPlayer == 'red'){
         currentPlayer = 'blue';
     }else {
@@ -70,7 +69,7 @@ const playerChoice = currentPlayer === 'red'? playerOneChoices : playerTwoChoice
 console.log(playerChoice, 'player choice')
 
 if (playerChoice.length >= 3){
-
+// then compare choices array with winning combinations
     const playerWon = winningCombinations.some(winningCombo => {
         return winningCombo.every((winningIndex) =>{
          return playerChoice.includes(winningIndex)
@@ -80,6 +79,7 @@ if (playerChoice.length >= 3){
 } else {
     return false;
 }
+
 
 }
 
