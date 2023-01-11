@@ -1,8 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 #alert {
     text-align: center;
     color: white;
+    font-size: 30px;
 }
 
 body {
@@ -14,8 +16,8 @@ body {
 
 .box { 
     border-radius: 10px;
-    
 }
+
 
 html {
     height: 100%;
@@ -23,7 +25,14 @@ html {
 }
 
 h1 {
+    font-family: 'Press Start 2P', cursive;
     color: white;
+
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
 }
 
 .parent {
@@ -44,8 +53,9 @@ h1 {
 
 #play-button {
     font-size: 1.3em;
+    font-family: 'Press Start 2P', cursive;
     border-radius: 10px;
-    padding: 1em;
+    padding:.5em;
     background-color: yellow;
     color: black;
     position:relative;
