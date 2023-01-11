@@ -32,7 +32,7 @@ function startGame (){
 colorBox.forEach((box) => {
     box.addEventListener('click', takeTurns);
 //reset buttons to grey when clicked
-    box.style.backgroundColor = 'purple'
+    box.style.backgroundColor = 'grey'
 });
     currentPlayer = 'green';
     alertMessage.textContent = `${currentPlayer}'s turn!`;

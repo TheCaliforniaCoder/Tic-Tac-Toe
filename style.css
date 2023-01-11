@@ -1,13 +1,14 @@
 body {
-    background-color: rgb(88, 68, 184);
+    background: white;
     height: 100%;
     width: 100%;
 }
 
-.box {
-    border-radius: 10px;
-    background-color: rgb(43, 31, 88);
-    
+.box { 
+    box-shadow:   -10px 0 0 0 black,
+    10px 0 0 0 black,
+    0 -10px 0 0 black,
+    0 10px 0 0 black;
 }
 
 html {
@@ -19,21 +20,19 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3, 80px);
-    grid-gap: 5px;
+    grid-gap: 30px;
     height: 100%;
-    
-    border: solid;
     justify-content: center;
     align-content: center;
 }
 
 .parent > div {
     padding: 10px;
-    background-color: rgb(43, 31, 88);
+    background-color: grey;
     
 }
 
 #play-button {
-    
+    margin-left: 50%;
 }
 
