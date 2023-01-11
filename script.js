@@ -1,5 +1,5 @@
 //create variables for current player, boxes and buttons
-let currentPlayer = 'green';
+let currentPlayer = 'red';
 let colorBox = document.querySelectorAll('.box');
 let startButton = document.querySelector('#play-button');
 let alertMessage = document.querySelector('#alert');
@@ -32,9 +32,9 @@ function startGame (){
 colorBox.forEach((box) => {
     box.addEventListener('click', takeTurns);
 //reset buttons to grey when clicked
-    box.style.backgroundColor = 'grey'
+    box.style.backgroundColor = 'grey';
 });
-    currentPlayer = 'green';
+    currentPlayer = 'red';
     alertMessage.textContent = `${currentPlayer}'s turn!`;
     startButton.innerHTML = 'Restart';
     gameOverPlayerWon = false;
@@ -52,8 +52,8 @@ function takeTurns(e){
     const currentIndex = parseInt(e.target.id)
     e.target.removeEventListener('click', takeTurns);
     // Change the box background color to match the currentPlayer
-    if (currentPlayer === 'green') {
-      e.target.style.backgroundColor = 'green';
+    if (currentPlayer === 'red') {
+      e.target.style.backgroundColor = 'red';
       playerOneChoices.push(currentIndex)
     } else {
       e.target.style.backgroundColor = 'blue';
@@ -78,19 +78,19 @@ function takeTurns(e){
     console.log('p2', playerTwoChoices)
 
 //sets up who's turns is it next based on the current value of currentPlayer
-    if (currentPlayer == 'green'){
+    if (currentPlayer == 'red'){
         currentPlayer = 'blue';
 // alert user on who's turn is it next
         alertMessage.textContent = `${currentPlayer}'s turn!`;
     }else {
-        currentPlayer = 'green';
+        currentPlayer = 'red';
         alertMessage.textContent = `${currentPlayer}'s turn!`;
     }
     
 }
 
 function determineWinner(currentPlayer){
-const playerChoice = currentPlayer === 'green'? playerOneChoices : playerTwoChoices;
+const playerChoice = currentPlayer === 'red'? playerOneChoices : playerTwoChoices;
 console.log(playerChoice, 'player choice')
 
 if (playerChoice.length >= 3){

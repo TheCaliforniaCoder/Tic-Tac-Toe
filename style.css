@@ -1,14 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+#alert {
+    text-align: center;
+    color: white;
+}
+
 body {
-    background: white;
+    text-align: center;
+    background: black;
     height: 100%;
     width: 100%;
 }
 
 .box { 
-    box-shadow:   -10px 0 0 0 black,
-    10px 0 0 0 black,
-    0 -10px 0 0 black,
-    0 10px 0 0 black;
+    border-radius: 10px;
+    
 }
 
 html {
@@ -16,12 +22,16 @@ html {
     width: 100%;
 }
 
+h1 {
+    color: white;
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3, 80px);
-    grid-gap: 30px;
-    height: 100%;
+    grid-gap: 10px;
+    height: 50%;
     justify-content: center;
     align-content: center;
 }
@@ -33,6 +43,14 @@ html {
 }
 
 #play-button {
-    margin-left: 50%;
+    font-size: 1.3em;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: yellow;
+    color: black;
+    position:relative;
+    display: block;
+    margin-bottom: 1.5em;
+    margin: 1em auto 0 auto;
 }
 
