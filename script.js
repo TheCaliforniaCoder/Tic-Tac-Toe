@@ -1,13 +1,15 @@
-//create variables for current player and buttons
-
-let currentPlayer = 'red';
+//create variables for current player, boxes and buttons
+let currentPlayer = 'green';
 let colorBox = document.querySelectorAll('.box');
-let restartButton = document.querySelector('#restart');
 let startButton = document.querySelector('#play-button');
 let alertMessage = document.querySelector('#alert');
 
 //variable that will change once player wins or ties
 let gameOverPlayerWon = false;
+
+//player choices arrays
+let playerOneChoices = [];
+let playerTwoChoices = [];
 
 //possible winning combinations
 const winningCombinations = [
@@ -21,35 +23,37 @@ const winningCombinations = [
     [2, 5, 8]
 ];
 
+//event listener for start/reset button 
+startButton.addEventListener('click', startGame);
 
-
-startButton.addEventListener('click', startGame)
-
-function startGame () {
-    //change the color of the boxes on click
+//start function and reset function
+function startGame (){
+//change the color of the boxes on click
 colorBox.forEach((box) => {
     box.addEventListener('click', takeTurns);
-})
-    startButton.addEventListener('click', restartGame);
-    currentPlayer = 'red';
+//reset buttons to grey when clicked
+    box.style.backgroundColor = 'purple'
+});
+    currentPlayer = 'green';
     alertMessage.textContent = `${currentPlayer}'s turn!`;
+    startButton.innerHTML = 'Restart';
+    gameOverPlayerWon = false;
+//resetting player choice arrays to empty
+ playerOneChoices = [];
+ playerTwoChoices = [];
 }
-
-//player choice arrays
-let playerOneChoices = [];
-
-let playerTwoChoices = [];
 
 //function that changes colors for each player and determines who's turn it is
 function takeTurns(e){
     if (gameOverPlayerWon){
         return;
     }
+//converts id to integer
     const currentIndex = parseInt(e.target.id)
     e.target.removeEventListener('click', takeTurns);
     // Change the box background color to match the currentPlayer
-    if (currentPlayer === 'red') {
-      e.target.style.backgroundColor = 'red';
+    if (currentPlayer === 'green') {
+      e.target.style.backgroundColor = 'green';
       playerOneChoices.push(currentIndex)
     } else {
       e.target.style.backgroundColor = 'blue';
@@ -58,6 +62,15 @@ function takeTurns(e){
 
     gameOverPlayerWon = determineWinner(currentPlayer);
 
+    if(gameOverPlayerWon){
+        alertMessage.textContent = `${currentPlayer} wins!`
+        return;
+    }
+
+    if(playerOneChoices.length + playerTwoChoices.length == 9 && !gameOverPlayerWon){
+        alertMessage.textContent = `It's a tie!`;
+        return;
+    }
 
     console.log(gameOverPlayerWon)
 
@@ -65,26 +78,23 @@ function takeTurns(e){
     console.log('p2', playerTwoChoices)
 
 //sets up who's turns is it next based on the current value of currentPlayer
-    if (currentPlayer == 'red'){
+    if (currentPlayer == 'green'){
         currentPlayer = 'blue';
-        // alert user on who's turn is it next
+// alert user on who's turn is it next
         alertMessage.textContent = `${currentPlayer}'s turn!`;
     }else {
-        currentPlayer = 'red';
-        // alert user on who's turn is it next
+        currentPlayer = 'green';
         alertMessage.textContent = `${currentPlayer}'s turn!`;
     }
-
-
     
 }
 
 function determineWinner(currentPlayer){
-const playerChoice = currentPlayer === 'red'? playerOneChoices : playerTwoChoices;
+const playerChoice = currentPlayer === 'green'? playerOneChoices : playerTwoChoices;
 console.log(playerChoice, 'player choice')
 
 if (playerChoice.length >= 3){
-// then compare choices array with winning combinations
+//then compare choices array with winning combinations
     const playerWon = winningCombinations.some(winningCombo => {
         return winningCombo.every((winningIndex) =>{
          return playerChoice.includes(winningIndex)
@@ -94,25 +104,5 @@ if (playerChoice.length >= 3){
 } else{
     return false;
 }
-}
-
-//restart game button
-restartButton.addEventListener('click',restartGame)
-
-function restartGame(){
-    currentPlayer = 'red';
-    alertMessage.textContent = `${currentPlayer}'s turn!`;
-    colorBox.forEach(box => box.style.backgroundColor = 'grey');
 
 }
-
-/* function displayResult(){
-    if(playerOneChoices.length + playerTwoChoices.length == 9){
-                return console.log(`it's a tie`)
-            }
-    else if ()
-} */
-//when it's time to make the restart button functional it could be something like
-//if outcome is only tie/win then restart if button is clicked 
-
-
