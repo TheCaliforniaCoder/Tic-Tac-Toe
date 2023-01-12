@@ -4,8 +4,11 @@
 
    Functional Tic Tac Toe game using HTML, CSS & Javascript
    
- ![Imgur](https://i.imgur.com/A2710Mk.png)
-  
-  
+   ![Imgur](https://i.imgur.com/A2710Mk.png)
+   
+  # Links
+   
+   * [Game Link] (https://thecaliforniacoder.github.io/Tic-Tac-Toe/)
 
+##
 
