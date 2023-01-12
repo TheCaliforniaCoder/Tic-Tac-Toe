@@ -61,24 +61,25 @@
    
    This was towards the end of my code since this was a bonus feature.
    
-   ## Challenges
+## Challenges
    
-     The main challenge I faced was understaning how to construct my determine winner function with redundant if/else statements. 
-     The array methods I mentioned above were a life-saver.
+   The main challenge I faced was understaning how to construct my determine winner function with redundant if/else statements. 
+   The array methods I mentioned above were a life-saver.
      
-     Another challenge I faced was understanding where to place certain code snippets. I'd finally get to a place where I understand WHAT code I needed but      was struggling to understand WHERE to place it.
+   Another challenge I faced was understanding where to place certain code snippets. 
+   I'd finally get to a place where I understand WHAT code I needed but was struggling to understand WHERE to place it.
      
-   ## Wins
+## Wins
    
-      Besides finishing on time, I'd say the biggest win is having learnt so many new ways of creating certain features.
+   Besides finishing on time, I'd say the biggest win is having learnt so many new ways of creating certain features.
       
-  ## Key Learnings & Takeaways
+## Key Learnings & Takeaways
   
-     * Using array methods to replace daunting for loops with redundant if/else statements.
-     * Placing code snippets in the correct place, (it sounds funny but I gained clarity with order in function).
-     * Utilizing certain resources besides Stack Overflow.
-     * Learning when to ask for help! Sometimes I don't need to spend hours/days researching when I have access to mentors to guide me.
-     * Realizing that I enjoy working on a team!
+   * Using array methods to replace daunting for loops with redundant if/else statements.
+   * Placing code snippets in the correct place, (it sounds funny but I gained clarity with order in function).
+   * Utilizing certain resources besides Stack Overflow.
+   * Learning when to ask for help! Sometimes I don't need to spend hours/days researching when I have access to mentors to guide me.
+   * Realizing that I enjoy working on a team!
 
 ## Future Improvements
 
