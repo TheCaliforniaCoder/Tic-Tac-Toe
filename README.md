@@ -47,9 +47,9 @@
    Although my code shows the 'startGame' function first, I initially began with my 'takeTurns' function where I was able to implement the rules.
    After the 'taketurns' was constructed, I dove in to the hardest part of the code, determining a winner!
    
-   * Determine Winner Function
+   * Determine Winner Function:
    
-   [Imgur](https://i.imgur.com/Qjzti7S.png)
+   ![Imgur](https://i.imgur.com/Qjzti7S.png)
    
    
 
