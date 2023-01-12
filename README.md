@@ -57,7 +57,7 @@
    
    * Add New Score Function:
 
-   [Imgur](https://i.imgur.com/0SeJhoH.png)
+   ![Imgur](https://i.imgur.com/0SeJhoH.png)
    
    This was towards the end of my code since this was a bonus feature.
 
