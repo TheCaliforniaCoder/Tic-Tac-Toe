@@ -1,23 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 #alert {
     text-align: center;
     color: white;
-    font-size: 30px;
-}
-
-body {
-    text-align: center;
-    background: black;
-    height: 100%;
-    width: 100%;
+    font-size: 60px;
+    font-family: 'VT323', monospace;
 }
 
 .box { 
     border-radius: 10px;
+    border: solid black;
 }
-
 
 html {
     height: 100%;
@@ -25,21 +18,16 @@ html {
 }
 
 h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'VT323', monospace;
     color: white;
-
-}
-
-p {
-    font-family: 'Press Start 2P', cursive;
-    padding: 10px;
+    font-size: 100px;
 }
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(3, 80px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 5px;
     height: 50%;
     justify-content: center;
     align-content: center;
@@ -47,16 +35,15 @@ p {
 
 .parent > div {
     padding: 10px;
-    background-color: grey;
-    
+    background-color: white;
 }
 
 #play-button {
-    font-size: 1.3em;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 35px;
+    font-family: 'VT323', monospace;
     border-radius: 10px;
     padding:.5em;
-    background-color: yellow;
+    background-color: #bde0fe;
     color: black;
     position:relative;
     display: block;
@@ -64,3 +51,22 @@ p {
     margin: 1em auto 0 auto;
 }
 
+@keyframes color {
+    0%   { background: #f3b5ed; }
+    20%  { background: #d282f0; }
+    40%  { background: #bd9bf6; }
+    60%  { background: #88a9e9; }
+    80%  { background: #d886f6; }
+    100% { background: #f0b2ea; }
+  }
+  
+  body {
+    background: #33CCCC; 
+    animation: color 9s infinite linear;
+    text-align: center;
+    padding: 2em;
+  }
+
+  .scores {
+    
+  }
