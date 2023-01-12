@@ -51,5 +51,13 @@
    
    ![Imgur](https://i.imgur.com/Qjzti7S.png)
    
+   I ended up using a combination of .some(), .every(), and includes() to find winning combination matches!
    
+   A function I'm particularly proud of is addNewScore(). This is because I nearly constructed it correctly on the first try.
+   
+   * Add New Score Function:
+
+   [Imgur](https://i.imgur.com/0SeJhoH.png)
+   
+   This was towards the end of my code since this was a bonus feature.
 
