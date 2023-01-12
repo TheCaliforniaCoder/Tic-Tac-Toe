@@ -36,27 +36,27 @@ function startGame (){
 //change the color of the boxes on click
 colorBox.forEach((box) => {
     box.addEventListener('click', takeTurns);
-//reset buttons to grey when clicked
-    box.style.backgroundColor = 'white';
-});
+//reset buttons to white when clicked
+    box.style.backgroundColor = 'white';});
     currentPlayer = 'Pink';
     alertMessage.textContent = `${currentPlayer}'s turn!`;
     startButton.innerHTML = 'Restart';
     gameOverPlayerWon = false;
 //resetting player choice arrays to empty
- playerOneChoices = [];
- playerTwoChoices = [];
+    playerOneChoices = [];
+    playerTwoChoices = [];
 }
 
-//function that changes colors for each player and determines who's turn it is
+//function that switches colors for each player and determines who's turn it is
 function takeTurns(e){
     if (gameOverPlayerWon){
         return;
     }
 //converts id to integer
     const currentIndex = parseInt(e.target.id)
+//prevents double click
     e.target.removeEventListener('click', takeTurns);
-    // Change the box background color to match the currentPlayer
+//change the box background color to match the currentPlayer
     if (currentPlayer === 'Pink') {
       e.target.style.backgroundColor = 'pink';
       playerOneChoices.push(currentIndex)
@@ -64,9 +64,9 @@ function takeTurns(e){
       e.target.style.backgroundColor = 'lightblue';
       playerTwoChoices.push(currentIndex)
     }
-
+//calls determine winner function
     gameOverPlayerWon = determineWinner(currentPlayer);
-
+//someone has either won or tied
     if(gameOverPlayerWon){
         addNewScore(gameOverPlayerWon);
         alertMessage.textContent = `${currentPlayer} wins!`
@@ -77,29 +77,26 @@ function takeTurns(e){
         alertMessage.textContent = `It's a tie!`;
         return;
     }
-
     console.log(gameOverPlayerWon)
-
     console.log('p1', playerOneChoices)
     console.log('p2', playerTwoChoices)
 
 //sets up who's turns is it next based on the current value of currentPlayer
     if (currentPlayer == 'Pink'){
         currentPlayer = 'Blue';
-// alert user on who's turn is it next
         alertMessage.textContent = `${currentPlayer}'s turn!`;
     }else {
         currentPlayer = 'Pink';
         alertMessage.textContent = `${currentPlayer}'s turn!`;
     }
-    
 }
 
+//function that compares the two player arrays(choices)
 function determineWinner(currentPlayer){
 const playerChoice = currentPlayer === 'Pink'? playerOneChoices : playerTwoChoices;
 console.log(playerChoice, 'player choice')
 
-if (playerChoice.length >= 3){
+    if (playerChoice.length >= 3){
 //then compare choices array with winning combinations
     const playerWon = winningCombinations.some(winningCombo => {
         return winningCombo.every((winningIndex) =>{
@@ -107,22 +104,19 @@ if (playerChoice.length >= 3){
         })
      })
     return playerWon? currentPlayer: false;
-} else{
+    } else{
     return false;
+    }
 }
 
-}
-
+//function that keeps track of score for each player
 function addNewScore(gameOverPlayerWon){
     if(gameOverPlayerWon == currentPlayer && currentPlayer == 'Pink'){
         pinkScore++;
         scoreDisplay1.textContent = `Pink's Score: ${pinkScore}`;
-        console.log(pinkScore)
     } else if (gameOverPlayerWon == currentPlayer && currentPlayer == 'Blue'){
         blueScore++;
         scoreDisplay2.textContent = `Blue's Score: ${blueScore}`;
-        console.log(blueScore)
-    }
-     
+    } 
 }
 
