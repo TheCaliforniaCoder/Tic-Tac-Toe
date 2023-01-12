@@ -8,7 +8,7 @@
    
   # Links
    
-   * [Game Link] (https://thecaliforniacoder.github.io/Tic-Tac-Toe/)
+   * [Game Link](https://thecaliforniacoder.github.io/Tic-Tac-Toe/)
 
 ##
 
