@@ -26,3 +26,30 @@
 
    * Keep track of multiple game rounds with a win, lose and tie counter
 
+## Timeframe & Team
+   
+   We were given a week to complete this solo assignment. 
+   
+## Technologies Used
+
+   I used HTML, CSS, and Vanilla Javascript to build this project.
+   
+## Planning 
+
+   * I started by writing as much pseudocode as possible.
+   * I created a To-Do list to keep track of tasks.
+   * I created a basic template of the game in HTML and CSS to visualize before my Javascript.
+
+## Build/Code Process
+
+   I started off by declaring the necessary variables: buttons, players, score, player choices (arrays), winning combinations (array) etc.
+   I then began to add event listeners to the game board buttons and assign a single color to each player. 
+   Although my code shows the 'startGame' function first, I initially began with my 'takeTurns' function where I was able to implement the rules.
+   After the 'taketurns' was constructed, I dove in to the hardest part of the code, determining a winner!
+   
+   * Determine Winner Function
+   
+   [Imgur](https://i.imgur.com/Qjzti7S.png)
+   
+   
+
