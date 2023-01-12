@@ -61,7 +61,7 @@
    
    This was towards the end of my code since this was a bonus feature.
    
-   ##Challenges
+   ## Challenges
    
      The main challenge I faced was understaning how to construct my determine winner function with redundant if/else statements. 
      The array methods I mentioned above were a life-saver.
@@ -72,7 +72,7 @@
    
       Besides finishing on time, I'd say the biggest win is having learnt so many new ways of creating certain features.
       
-  ## Key Learnings/Takeaways
+  ## Key Learnings & Takeaways
   
      * Using array methods to replace daunting for loops with redundant if/else statements.
      * Placing code snippets in the correct place, (it sounds funny but I gained clarity with order in function).
