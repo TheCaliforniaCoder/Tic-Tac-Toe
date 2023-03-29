@@ -87,6 +87,10 @@ A portion of my code that I'm particularly proud of is the ‘addNewScore’ fun
    * Learning when to ask for help! Sometimes I don't need to spend hours/days researching when I have access to mentors to guide me.
    * Realizing that I enjoy working on a team!
 
+## Bugs
+
+Next time, I want to improve the CSS layout so that everything appears 'above the fold'. I still need more practice with pure CSS.
+
 ## Future Improvements
 
    Going forward, I'll structure my time more effeciently by spending more time on the core functionality as opposed to honing in on the details.
