@@ -63,7 +63,7 @@
    
 ## Challenges
    
-   The main challenge I faced was understaning how to construct my determine winner function with redundant if/else statements. 
+   The main challenge I faced was understanding how to construct my determine winner function with redundant if/else statements. 
    The array methods I mentioned above were a life-saver.
      
    Another challenge I faced was understanding where to place certain code snippets. 
