@@ -53,11 +53,24 @@ To access and run the code for this project, follow these steps:
 
 ### Day 1:
 
-I spent the first day of the project planning by creating a list of tasks within an ordered ‘To-Do’ list. Once that was done, I spent some time brainstorming until I was able to thoroughly sudo-code the rules of the game and all of the possible winning combinations. 
+I spent the first day of the project planning by creating a list of tasks within an ordered ‘To-Do’ list. Once that was done, I spent some time brainstorming until I was able to thoroughly pseudocode the rules of the game and all of the possible winning combinations. 
 
 ### Day 2 - 4:
 
-I started off by declaring the necessary variables: buttons, players, score, player choices (arrays), winning combinations (array) etc. I then began to add event listeners to the game board buttons and assign a single colour to each player. Although my code shows the 'startGame' function first, I initially began with my 'takeTurns' function where I was able to implement the rules. After the 'takeTurns' was constructed, I dove into the hardest part of the code, determining a winner! I ended up using a combination of .some(), .every(), and .includes() to find winning combination matches!
+The function that took the most time was the 'takeTurns' function where I was able to implement the rules. The function performs the following actions:
+
+  * It begins by checking if a player has won already, if not, then it continues with the rest of the function. 
+  * It sets the 'currentIndex' variable to the ID in which the 'currentPlayer' has clicked.
+  * It prevents a player from being able to click the same choice twice by removing the event listener.
+  * It changes the background color of each clickable box on the grid to match the color of the 'currentPlayer' using an if/else statement.
+  * It defines the 'gameOverPlayerWon' variable which calls the 'determineWinner' function (shown later). 
+  * Then, it determines if someone has won by checking the 'gameOverPlayerWon' variable within an if statement and alerts the players of the winner. Later on, I added an 'addNewScore' function where I kept score of each player's wins, and called that function here. 
+  * If no player has won, and both 'playerChoices' arrays length add up to 9, then it's deemed a tie.
+  * Finally, the function ends with an if/else statement that determines whose turn it is based on the current value of the 'currentPlayer' variable.
+  
+  ![Imgur](https://i.imgur.com/WN7BPZO.jpg)
+
+After the 'takeTurns' was constructed, I dove into the hardest part of the code, determining a winner! I ended up using a combination of .some(), .every(), and .includes() to find winning combination matches!
 
  * Determine Winner Function:
    
@@ -77,7 +90,7 @@ A portion of my code that I'm particularly proud of is the ‘addNewScore’ fun
    
 ## Challenges
    
-   The main challenge I faced was understanding how to construct my determine winner function without redundant if/else statements. 
+   The main challenge I faced was understanding how to construct my ‘determineWinner’ function without redundant if/else statements. 
    The array methods I mentioned above were a life-saver.
      
    Another challenge I faced was understanding where to place certain code snippets. 
