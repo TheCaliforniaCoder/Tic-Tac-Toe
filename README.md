@@ -93,5 +93,7 @@ Next time, I want to improve the CSS layout so that everything appears 'above th
 
 ## Future Improvements
 
-   Going forward, I'll structure my time more effeciently by spending more time on the core functionality as opposed to honing in on the details.
-   I'll test as I go more often and get feeback as I progress!
+Going forward, I'll structure my time more efficiently by spending more time on the core functionality as opposed to honing in on the details. I'll test as I go more often and get feedback as I progress!
+
+As for the game, I’d like to adjust the layout and maybe even add audio for a better user experience!
+
