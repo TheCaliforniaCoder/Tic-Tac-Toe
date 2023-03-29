@@ -11,6 +11,14 @@
 # Links
    
    * [Play Tic Tac Toe Here](https://thecaliforniacoder.github.io/Tic-Tac-Toe/)
+   
+## Code Installation
+
+To access and run the code for this project, follow these steps:
+
+   * Download or clone the project repository from GitHub. You can do this by clicking on the green “Code” button and selecting “Download ZIP” to download      a zipped version of the code, or by copying the repository URL and running git clone in your terminal.
+   * Once you have the code downloaded or cloned, open the project folder in your code editor of choice.
+   * Open the index.html file in your web browser to view the project.
 
 ## User Stories
 
