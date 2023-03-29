@@ -73,7 +73,6 @@ A portion of my code that I'm particularly proud of is the ‘addNewScore’ fun
    The array methods I mentioned above were a life-saver.
      
    Another challenge I faced was understanding where to place certain code snippets. 
-   I had, finally, got to a place where I understood WHAT code I needed but was struggling to understand WHERE to place it.
      
 ## Wins
    
