@@ -2,13 +2,13 @@
 
 ## Description:
 
-   Functional Tic Tac Toe game using HTML, CSS & Javascript!
+  This is my first project using React as part of the SEI General Assembly Course. The task was to create a web application using ReactJS and an API of       your choice that met the requirements of a provided specification.
    
    * Preview Image:
    
    ![Imgur](https://i.imgur.com/A2710Mk.png)
    
-# Links
+# Deployment Link
    
    * [Play Tic Tac Toe Here](https://thecaliforniacoder.github.io/Tic-Tac-Toe/)
    
@@ -20,7 +20,7 @@ To access and run the code for this project, follow these steps:
    * Once you have the code downloaded or cloned, open the project folder in your code editor of choice.
    * Open the index.html file in your web browser to view the project.
 
-## User Stories
+## Technical Requirements
 
    * As a user, I should be able to start a new tic tac toe game.
    * As a user, I should be able to click on a square to add X first and then O, and so on.
@@ -38,7 +38,7 @@ To access and run the code for this project, follow these steps:
 
    * HTML
    * CSS with animation
-   * JavaScript (ES6)
+   * JavaScript 
    * Git
    * GitHub
 
