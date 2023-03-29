@@ -2,7 +2,7 @@
 
 ## Description:
 
-  This is my first project using React as part of the SEI General Assembly Course. The task was to create a web application using ReactJS and an API of       your choice that met the requirements of a provided specification.
+My initial project during the Software Engineering Immersive program at General Assembly was a solo endeavour that took seven days to complete. This was my maiden voyage creating a full-fledged game and also marked my first hands-on experience working with JavaScript in a practical setting.
    
    * Preview Image:
    
