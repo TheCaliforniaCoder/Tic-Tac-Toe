@@ -95,7 +95,7 @@ A portion of my code that I'm particularly proud of is the ‘addNewScore’ fun
    The main challenge I faced was understanding how to construct my ‘determineWinner’ function without redundant if/else statements. 
    The array methods I mentioned above were a life-saver.
      
-   Another challenge I faced was understanding where to place certain code snippets. 
+   Another challenge I faced was understanding where to place certain code snippets but gained more clarity as I progressed.
      
 ## Wins
    
