@@ -3,6 +3,8 @@
 ## Description:
 
 My initial project during the Software Engineering Immersive program at General Assembly was a solo endeavour that took seven days to complete. This was my maiden voyage creating a full-fledged game and also marked my first hands-on experience working with JavaScript in a practical setting.
+
+The goal of this project was to build a Tic Tac Toe game using HTML, CSS & Javascript. Two players can take turns until they tie or someone wins. Players can play multiple times and keep score!
    
    * Preview Image:
    
@@ -97,13 +99,14 @@ A portion of my code that I'm particularly proud of is the ‘addNewScore’ fun
      
 ## Wins
    
-   Besides finishing on time, I'd say the biggest win is having learnt so many new ways of creating certain features.
+   Besides finishing on time, I'd say the biggest win is having learnt so many new ways of creating certain features. Array methods proved to be massively    helpful. Using .some(), .every(), and .includes() together was probably my biggest time saver. 
+
       
 ## Key Learnings & Takeaways
   
    * Using array methods to replace daunting for loops.
    * Placing code snippets in the correct order, (it sounds funny but I actually gained a lot of clarity).
-   * Utilizing certain resources besides Stack Overflow.
+   * Utilizing certain resources besides Stack Overflow like MDN Web Docs.
    * Learning when to ask for help! Sometimes I don't need to spend hours/days researching when I have access to mentors to guide me.
    * Realizing that I enjoy working on a team!
 
@@ -115,5 +118,5 @@ Next time, I want to improve the CSS layout so that everything appears 'above th
 
 Going forward, I'll structure my time more efficiently by spending more time on the core functionality as opposed to honing in on the details. I'll test as I go more often and get feedback as I progress!
 
-As for the game, I’d like to adjust the layout and maybe even add audio for a better user experience!
+As for the game, I’d like to adjust the layout to have the ‘start game’ button appear above the fold for smaller screens and maybe even add audio for a better user experience.
 
