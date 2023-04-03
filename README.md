@@ -70,13 +70,76 @@ The function that took the most time was the 'takeTurns' function where I was ab
   * If no player has won, and both 'playerChoices' arrays length add up to 9, then it's deemed a tie.
   * Finally, the function ends with an if/else statement that determines whose turn it is based on the current value of the 'currentPlayer' variable.
   
-  ![Imgur](https://i.imgur.com/WN7BPZO.jpg)
+ ```javascript
+ 
+//function that switches colors for each player and determines who's turn it is
+function takeTurns(e) {
+  if (gameOverPlayerWon) {
+    return;
+  }
+  //converts id to integer
+  const currentIndex = parseInt(e.target.id);
+  //prevents double click
+  e.target.removeEventListener('click', takeTurns);
+  //change the box background color to match the currentPlayer
+  if (currentPlayer === 'Pink') {
+    e.target.style.backgroundColor = 'pink';
+    playerOneChoices.push(currentIndex);
+  } else {
+    e.target.style.backgroundColor = 'lightblue';
+    playerTwoChoices.push(currentIndex);
+  }
+  //calls determine winner function
+  gameOverPlayerWon = determineWinner(currentPlayer);
+  //someone has either won or tied
+  if (gameOverPlayerWon) {
+    addNewScore(gameOverPlayerWon);
+    alertMessage.textContent = `${currentPlayer} wins!`;
+    return;
+  }
+
+  if (playerOneChoices.length + playerTwoChoices.length == 9 && !gameOverPlayerWon) {
+    alertMessage.textContent = `It's a tie!`;
+    return;
+  }
+
+  //sets up who's turns is it next based on the current value of currentPlayer
+  if (currentPlayer == 'Pink') {
+    currentPlayer = 'Blue';
+    alertMessage.textContent = `${currentPlayer}'s turn!`;
+  } else {
+    currentPlayer = 'Pink';
+    alertMessage.textContent = `${currentPlayer}'s turn!`;
+  }
+}
+
+
+ ```
 
 After the 'takeTurns' was constructed, I dove into the hardest part of the code, determining a winner! I ended up using a combination of .some(), .every(), and .includes() to find winning combination matches!
 
  * Determine Winner Function:
    
-   ![Imgur](https://i.imgur.com/Qjzti7S.png)
+```javascript
+
+//function that compares the two player arrays(choices)
+function determineWinner(currentPlayer) {
+  const playerChoice = currentPlayer === 'Pink' ? playerOneChoices : playerTwoChoices;
+
+  if (playerChoice.length >= 3) {
+    //then compare choices array with winning combinations
+    const playerWon = winningCombinations.some(winningCombo => {
+      return winningCombo.every((winningIndex) => {
+        return playerChoice.includes(winningIndex)
+      })
+    })
+    return playerWon ? currentPlayer : false;
+  } else {
+    return false;
+  }
+}
+
+```
    
 ### Day 5:
 
@@ -88,7 +151,19 @@ A portion of my code that I'm particularly proud of is the ‘addNewScore’ fun
 
    * Add New Score Function:
 
-   ![Imgur](https://i.imgur.com/0SeJhoH.png)
+```javascript
+
+//function that keeps track of score for each player
+function addNewScore(gameOverPlayerWon){
+    if(gameOverPlayerWon == currentPlayer && currentPlayer == 'Pink'){
+        pinkScore++;
+        scoreDisplay1.textContent = `Pink's Score: ${pinkScore}`;
+    } else if (gameOverPlayerWon == currentPlayer && currentPlayer == 'Blue'){
+        blueScore++;
+        scoreDisplay2.textContent = `Blue's Score: ${blueScore}`;
+    } 
+}
+```
    
 ## Challenges
    
